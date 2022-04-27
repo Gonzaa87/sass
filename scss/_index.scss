@@ -1,0 +1,57 @@
+
+/*arrancan estilos de index*/
+
+.date {
+    display: flex;
+    flex-flow: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+   font-weight: bold;
+}
+
+.title{
+    display: flex;
+    flex-flow: column;
+    align-items:center;
+    padding: 2rem;
+    
+}
+
+.news { 
+    display: flex;
+    flex-flow: wrap;
+    justify-content: center;
+    padding: 2rem;
+    font-weight: bold;
+}
+
+
+h2 {
+    text-align: center;
+    padding: 1rem;
+    font-weight: bold;
+    
+    
+}
+
+.destinos ul {
+    display: flex;
+    flex-flow:row nowrap ;
+    justify-content: center;
+    align-content: space-around;
+    background-color: grey;
+}
+.imgdestinos {
+    max-width: 300px;
+    padding: 1rem;
+}
+
+li {
+    display: flex;
+    flex-flow: column;
+    padding: 1rem;
+    text-align: center;
+    
+}
+/*terminan estilos de index*/
