@@ -39,7 +39,8 @@ header .ulnav .linav {
 
 /*termina estilos de header*/
 /*arrancan estilos de index*/
-.date {
+/*aplico extends */
+.date, .news {
   display: flex;
   flex-flow: wrap;
   justify-content: center;
@@ -53,14 +54,6 @@ header .ulnav .linav {
   flex-flow: column;
   align-items: center;
   padding: 2rem;
-}
-
-.news {
-  display: flex;
-  flex-flow: wrap;
-  justify-content: center;
-  padding: 2rem;
-  font-weight: bold;
 }
 
 h2 {
@@ -143,6 +136,7 @@ section p {
   justify-content: center;
 }
 
+/*aplico mixins*/
 iframe {
   margin: auto;
   padding: 1rem;
@@ -167,6 +161,27 @@ iframe {
   color: bisque;
   padding: 2rem;
   margin: 2rem;
+}
+
+/*aplico map con un lista*/
+.btn--twitter {
+  background-color: rgb(16, 97, 204);
+}
+
+.btn--facebook {
+  background-color: rgb(18, 22, 224);
+}
+
+.btn--send-mail {
+  background-color: rgb(101, 33, 179);
+}
+
+/*aplico map get()*/
+div {
+  background-color: rgb(49, 33, 66);
+  text-align: center;
+  font-size: 50px;
+  padding: 1rem;
 }
 
 /*# sourceMappingURL=destino.css.map */

@@ -13,6 +13,9 @@ body {
     background-color: blanchedalmond;
 }
 
+
+
+
 /*arrancan estilos de header*/ 
 .icon {
     max-width: 100px;
@@ -52,8 +55,10 @@ header {
 
 
 
+
 /*arrancan estilos de index*/
 
+/*aplico extends */ 
 .date {
     display: flex;
     flex-flow: wrap;
@@ -72,11 +77,7 @@ header {
 }
 
 .news { 
-    display: flex;
-    flex-flow: wrap;
-    justify-content: center;
-    padding: 2rem;
-    font-weight: bold;
+    @extend .date
 }
 
 
@@ -176,10 +177,18 @@ section {
     justify-content: center;
 }
 
-iframe {
-    margin: auto;
-    padding: 1rem;
+/*aplico mixins*/
+
+
+@mixin cajero($margen, $pad){
+    margin: $margen;
+    padding: $pad;
 }
+
+iframe {
+    @include cajero(auto, 1rem )
+}
+
 
 .of1{
     border: 5px white solid;
@@ -200,4 +209,35 @@ iframe {
     color: bisque;
     padding: 2rem;
     margin: 2rem;
+}
+
+/*aplico map con un lista*/
+
+$redes: (
+    twitter: rgb(16, 97, 204),
+    facebook:rgb(18, 22, 224),
+    send-mail:rgb(101, 33, 179)
+    
+);
+
+@each $red, $color in $redes {
+    .btn--#{$red} {
+        background-color: $color;
+    }
+}
+
+/*aplico map get()*/
+
+$estilos: (
+    color:rgb(49, 33, 66),
+    centro: center,
+    tFuente: 50px,
+    1rem: 1rem,
+);
+
+div {
+    background-color: map-get($estilos , color );
+    text-align: map-get($estilos , centro );
+    font-size: map-get($estilos , tFuente );
+    padding: map-get($estilos , 1rem );
 }
